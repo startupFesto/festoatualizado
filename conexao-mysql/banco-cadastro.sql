@@ -29,10 +29,13 @@ CREATE TABLE servicos_prestadores (
   `nome_serv`  VARCHAR(100) NOT NULL,
   `finalidade` VARCHAR(100) NOT NULL,
   `preco` FLOAT NOT NULL,
-  `dias` DATE NOT NULL,
+  `dias` VARCHAR(50) NOT NULL,
   `cidades` VARCHAR(75) NOT NULL,
   `tam_equipe` INT NOT NULL,
   `img_serv` blob not null,
+  `fornecedor` VARCHAR(75) NOT NULL,
+  `contato` VARCHAR(15) NOT NULL,
+  `pix` VARCHAR(32) NOT NULL,
   PRIMARY KEY (`id_serv`)
   );
 
@@ -60,9 +63,9 @@ CREATE TABLE servicos_clientes (
   `id_serv` INT NOT NULL auto_increment,
   `nome_serv`  VARCHAR(100) NOT NULL,
   `finalidade` VARCHAR(100) NOT NULL,
-  `dias` DATE NOT NULL,
+  `dias` VARCHAR(50) NOT NULL,
   `cidades` VARCHAR(75) NOT NULL,
-  `tam_equipe` INT NOT NULL,
-  `img_serv` blob not null,
+  `cliente` VARCHAR(75) NOT NULL,
+  `contato` VARCHAR(11) NOT NULL,
   PRIMARY KEY (`id_serv`)
   );
