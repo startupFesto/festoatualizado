@@ -1,0 +1,50 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  #hrtop {
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  
+  .selecione{
+    margin-top: 3%;
+  }
+  
+  .button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: 2px solid #EBB30E;
+    border-radius: 5px;
+    color: #EBB30E;
+    text-decoration: none;
+    background-color: white;
+    margin: 0 10px;
+    transition: background-color 0.4s ease;
+  }
+  
+  .button:hover {
+    background-color: #EBB30E;
+    color: white;
+  }
+  
+  .logo {
+    margin-top: 1.5%;
+    margin-left: 6%;
+    width: 120px;
+  }
