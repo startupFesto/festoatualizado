@@ -32,77 +32,75 @@ $result = $conexao->query($sql);
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg">
-        <div class="container-fluid">
-            <a href="../index.html"><img class="logo" src="../assets/festoblacknobgLOGOTOP.png"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg">
+            <div class="container-fluid">
+                <a href="../index.html"><img class="logo" src="../assets/festoblacknobgLOGOTOP.png"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="d-flex btntop">
+                <a href="../servicos/meus-pedidos.php" class="botao">Pedidos</a>
+                <a href="sair-clt.php" class="botao">Sair</a>
+            </div>
+        </nav>
+        <hr>
+        <div class="banner-logado">
+            <?php
+            echo "<h1>Bem vindo <u>$logado</u></h1>";
+            ?>
         </div>
-        <div class="d-flex btntop">
-            <a href="../servicos/meus-pedidos.php" class="botao">Pedidos</a>
-            <a href="sair-clt.php" class="botao">Sair</a>
+        <div class="fazer-pedido">
+            <h4>Faça agora seu pedido personalizado para sua festa!</h4>
+            <a href="../servicos/novo-pedido.php" class="botao btnpedido">Fazer novo pedido</a>
         </div>
-    </nav>
+        <hr>
+        <h2>Dados do perfil</h2>
+        <table>
+                <tbody>
+                    <?php
+                    while ($user_data = mysqli_fetch_assoc($result)) {
+                        echo "<div class='classe'>";
 
-    <hr>
-    <?php
-    echo "<h1>Bem vindo <u>$logado</u></h1>";
-    ?>
-    <br>
-    <br>
-    
-    <div class="fazer">
-        <h4>Faca agora seu pedido personalizado para sua festa!</h4>
-        <a href="../servicos/novo-pedido.php" class="botao btnpedido">Fazer novo pedido</a>
-    </div>
-    <br><hr><br>
-    <h2>Dados do perfil</h2><br>
-    <table>
-            <tbody>
-                <?php
-                while ($user_data = mysqli_fetch_assoc($result)) {
-                    echo "<div class='classe'>";
+                        echo "<ul class='dados-perfil'><li><img src='../assets/placeholder.jpg' width='100px'></li></ul>";
+                        echo "<ul class='dados-perfil' id='aa'>";
+                        echo "<li>Nome Completo: </li>";
+                        echo "<li>Email: </li>";
+                        echo "<li>Telefone: </li>";
+                        echo "<li>Cidade:</li>";
+                        echo "<li>Estado:</li>";
+                        echo "<li>Endereço:</li>";
+                        echo "</ul>";
 
-                    echo "<ul class='aaaa'><li><img src='../assets/placeholder.jpg' width='100px'></li></ul>";
-                    echo "<ul class='aaaa' id='aa'>";
-                    echo "<li>Nome Completo: </li>";
-                    echo "<li>Email: </li>";
-                    echo "<li>Telefone: </li>";
-                    echo "<li>Cidade:</li>";
-                    echo "<li>Estado:</li>";
-                    echo "<li>EndereÃ§o:</li>";
+                        echo "<ul class='dados-perfil'>";
+                        echo "<li>" . $user_data["nome"] . "</li>";
+                        echo "<li>" . $user_data["email"] . "</li>";
+                        echo "<li>" . $user_data["telefone"] . "</li>";
+                        echo "<li>" . $user_data["cidade"] . "</li>";
+                        echo "<li>" . $user_data["estado"] . "</li>";
+                        echo "<li>" . $user_data["endereco"] . "</li>";
+                        echo "</ul>";
+                        
+                        echo "</div>";
+                        echo "<ul class='a'>";
+                        echo "<a class='btn btn-sm btn-primary' href='edt-clt.php?id=$user_data[id]'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>
+                            <path d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z'/>
+                        </svg>
+                    </a>";                
+                    echo "<br>" . "<a class='btn btn-sm btn-danger' id='bt' href='dlt-clt.php?id=$user_data[id]'>
+                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash3-fill' viewBox='0 0 16 16'>
+                            <path d='M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z'/>
+                        </svg>
+                    </a>";
                     echo "</ul>";
+                    }
+                    ?>
+        </div>
 
-                    echo "<ul class='aaaa'>";
-                    echo "<li>" . $user_data["nome"] . "</li>";
-                    echo "<li>" . $user_data["email"] . "</li>";
-                    echo "<li>" . $user_data["telefone"] . "</li>";
-                    echo "<li>" . $user_data["cidade"] . "</li>";
-                    echo "<li>" . $user_data["estado"] . "</li>";
-                    echo "<li>" . $user_data["endereco"] . "</li>";
-                    echo "</ul>";
-                    
-                    echo "</div>";
-                    echo "<ul class='a'>";
-                    echo "<a class='btn btn-sm btn-primary' href='edt-clt.php?id=$user_data[id]'>
-                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>
-                        <path d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z'/>
-                    </svg>
-                </a>";                
-                echo "<br>" . "<a class='btn btn-sm btn-danger' id='bt' href='dlt-clt.php?id=$user_data[id]'>
-                        <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash3-fill' viewBox='0 0 16 16'>
-                        <path d='M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z'/>
-                    </svg>
-                </a>";
-                echo "</ul>";
-                }
-                ?>
-    </div>
-
-    
-</body>
+        
+    </body>
 
 </html>

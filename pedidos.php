@@ -33,7 +33,7 @@ $result = $conexao->query($sql);
                 while ($user_data = mysqli_fetch_assoc($result)) {
                     echo "<div class='classe'>";
 
-                    echo "<ul class='aaaa' id='aa'>";
+                    echo "<ul class='dados-perfil' id='aa'>";
                     echo "<li>Pedido: </li>";
                     echo "<li>Finalidade: </li>";
                     echo "<li>Data: </li>";
@@ -42,7 +42,7 @@ $result = $conexao->query($sql);
                     echo "<li>Contato:</li>";
                     echo "</ul>";
 
-                    echo "<ul class='aaaa'>";
+                    echo "<ul class='dados-perfil'>";
                     echo "<li>" . $user_data["nome_serv"] . "</li>";
                     echo "<li>" . $user_data["finalidade"] . "</li>";
                     echo "<li>" . $user_data["dias"] . "</li>";
