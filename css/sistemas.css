@@ -9,11 +9,17 @@ body {
 
 }
 
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
 .banner-logado{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 1rem;
 }
 
 h1 {
@@ -93,7 +99,7 @@ h1 {
 
 .classe {
     display: grid;
-    grid-template-columns: 10em 13em 20em ;
+    grid-template-columns: 10em 20em 15em ;
     justify-content: center;
     align-items: center;
     text-align: left;

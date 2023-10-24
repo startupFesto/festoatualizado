@@ -132,7 +132,7 @@ if (isset($_POST['submit'])) {
                     </div>
                 </form>
                 <br>
-                <a class="link" href="../login/escolha-log.html">J? tem uma conta? Fa?a login agora mesmo!</a>
+                <a class="link" href="../login/escolha-log.html">Já tem uma conta? Faça login agora mesmo!</a>
                 <hr>
                 <a class="link" href="../index.html">Voltar</a>
             </div>
