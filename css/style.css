@@ -63,7 +63,8 @@ body {
 }
 
 .btnveja:hover {
-    color: rgb(255, 255, 255);
+    color: white;
+    background-color: #EBB30E;
 }
 
 .btnstopcadastro {
@@ -173,7 +174,7 @@ form {
     margin: 0 12% 3% 12%;
     color: #555;
     display: flex;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 50px;
     justify-content: space-between;
 }
@@ -183,8 +184,8 @@ input[type=search] {
     border: none;
     background-color: white;
     margin: 0;
-    padding: 10px 25px;
-    font-size: 14px;
+    padding: 12px 30px;
+    font-size: 16px;
     color: inherit;
     border: 1px solid transparent;
     border-radius: inherit;

@@ -33,6 +33,9 @@ $result = $conexao->query($sql);
 </head>
 
 <body>
+
+    <!-- HEADER SECTION  -->
+
     <nav class="topbar navbar navbar-expand-lg navbar-dark bg">
         <div class="container-fluid">
             <a href="../index.html"><img class="logo" src="../assets/festoblacknobgLOGOTOP.png"></a>
@@ -46,6 +49,9 @@ $result = $conexao->query($sql);
             <a href="sair-clt.php" class="botao">Sair</a>
         </div>
     </nav>
+
+    <!-- HEADER SECTION  -->
+    
     <div class="banner-logado">
         <?php
         echo "<h1>Bem vindo <u>$logado</u></h1>";

@@ -1,8 +1,11 @@
 /* SCRIPT CSS DA PAGINA DE PERFIL DO USUÁRIO */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-body {
+*{
     font-family: 'Montserrat', sans-serif;
+}
+
+body {
     text-align: center;
     margin: 0;
     padding: 0;
@@ -95,7 +98,9 @@ h1 {
     width: 130px;
 }
 
-
+ul{
+    list-style: none;
+}
 
 .classe {
     display: grid;
@@ -147,15 +152,19 @@ h1 {
 
 /* Estilos para o botão de envio */
 .enviar-button {
-    background-color: #ffee00; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    border: none;
-    border-radius: 1rem;
-    padding: 10px 20px;
-    cursor: pointer;
+    width: 105px;
+    text-decoration: none;
+    padding: 0.4rem;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    font-weight: 500;
+    border: 2px solid #EBB30E;
+    border-radius: 10px;
+    transition: linear 0.2s;
 }
 
 /* Estilos para o botão de envio ao passar o mouse por cima */
 .enviar-button:hover {
-    background-color: #dbc236;
+    color: white;
+    background-color: #EBB30E;
 }

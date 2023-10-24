@@ -28,45 +28,50 @@ $result = $conexao->query($sql);
     <title>Perfil - Prestador</title>
     <link rel="stylesheet" href="../css/sistemas.css">
     <link rel="icon" type="image/x-icon" href="../assets/festo.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg">
+
+    <!-- HEADER SECTION  -->
+
+    <nav class="topbar navbar navbar-expand-lg navbar-dark bg">
         <div class="container-fluid">
             <a href="../index.html"><img class="logo" src="../assets/festoblacknobgLOGOTOP.png"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
         </div>
         <div class="d-flex btntop">
             <a href="../servicos/meus-servicos.php" class="botao">Servicos</a>
             <a href="sair-prest.php" class="botao">Sair</a>
         </div>
     </nav>
-    <hr>
+
+    <!-- HEADER SECTION  -->
+
     <?php
     echo "<h1>Bem vindo <u>$logado</u></h1>";
     ?>
     <br>
-    <br>
-
     <div class="fazer">
         <h4>Ofereca agora seus servicos para diversos clientes!</h4>
         <a href="../servicos/novo-servico.php" class="botao btnpedido">Realizar novo servico</a>
     </div>
-
     <br>
-    <hr><br>
-    <h2>Dados do perfil</h2><br>
+    <br>
+    <hr>
+    <h2>Dados do perfil</h2>
     <table>
         <tbody>
             <?php
             while ($user_data = mysqli_fetch_assoc($result)) {
                 echo "<div class='classe'>";
 
-                echo "<ul class='aaaa'><li><img src='../assets/placeholder.jpg' width='100px'></li></ul>";
-                echo "<ul class='aaaa' id='aa'>";
+                echo "<ul class=''><li><img src='../assets/placeholder.jpg' width='100px'></li></ul>";
+                echo "<ul class='' id='aa'>";
                 echo "<li>Nome Completo: </li>";
                 echo "<li>Email: </li>";
                 echo "<li>Telefone: </li>";
@@ -101,10 +106,10 @@ $result = $conexao->query($sql);
             ?>
             </div>
 
-            <!-- DESCRI��O PERFIL  -->
+            <!-- DESCRICAO PERFIL  -->
             <div class="container">
                 <div class="descricao-container">
-                    <label for="descricao">Descri��o Pessoal:</label>
+                    <label for="descricao">Descricao Pessoal:</label>
                     <textarea id="descricao" class="descricao-box" placeholder="Descreva-se aqui"></textarea>
                     <button class="enviar-button">Enviar</button>
                 </div>
