@@ -17,13 +17,27 @@ $result = $conexao->query($sql);
     <meta charset="ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços disponíveis</title>
+
+    <!-- LINKS -->
+
     <link rel="icon" type="image/x-icon" href="assets/festo.ico">
     <link rel="stylesheet" href="css/sistemas.css">
+
+    <!-- LINKS -->
+
 </head>
 
 <body>
+
+    <!-- HEADER -->
+
+    <a href="index.html">Voltar</a>
+
+    <!-- HEADER -->
+
+    <!-- SECTION PEDIDOS -->
+
     <div class="banner">
-        <a href="index.html">Voltar</a>
         <h1>
             Serviços disponíveis
         </h1>
@@ -63,6 +77,9 @@ $result = $conexao->query($sql);
             </tbody>
         </table>
     </div>
+
+    <!-- SECTION PEDIDOS -->
+
 </body>
 
 </html>

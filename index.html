@@ -1,70 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="ISO-8859-1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Festo!</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="ISO-8859-1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Festô!</title>
+
+    <!-- LINKS -->
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-</head>
-<body>
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- LINKS -->
+  </head>
+  <body>
+    <!-- HEADER -->
 
     <div class="header">
-        <div>
-            <a href="index.html"><img class="logo" src="assets/festoblacknobgLOGOTOP.png"></a>
-        </div>
-        <div class="buttonstop">
-            <a class="btnstop" href="suporte/suporte.html">Suporte</a>
-            <a class="btnstop" href="login/escolha-log.html">Login</a>
-            <a class="btnstop btnstopcadastro" id="btnborder" href="cadastro/escolha-cad.html">Cadastre-se</a>
-        </div>
+      <div>
+        <a href="index.html"
+          ><img class="logo" src="assets/festoblacknobgLOGOTOP.png"
+        /></a>
+      </div>
+      <div class="buttonstop">
+        <a class="btnstop" href="suporte/suporte.html">Suporte</a>
+        <a class="btnstop" href="login/escolha-log.html">Login</a>
+        <a
+          class="btnstop btnstopcadastro"
+          id="btnborder"
+          href="cadastro/escolha-cad.html"
+          >Cadastre-se</a
+        >
+      </div>
     </div>
 
+    <!-- HEADER -->
+
+    <!-- BANNER SECTION  -->
     <div class="banner">
-        <img src="assets/banner.jpg" alt="">
-        <div class="banner-text">
-            <h1>Faça seu evento pelo Festô!</h1>
-            <a href="#" class="btnveja" id="btnborder">Ver ofertas</a>
-        </div>
+      <img src="assets/banner.jpg" alt="" />
+      <div class="banner-text">
+        <h1>Faça seu evento pelo Festô!</h1>
+        <a href="#" class="btnveja" id="btnborder">Ver ofertas</a>
+      </div>
     </div>
 
-    <hr id="hrtop">
+    <hr id="hrtop" />
 
     <div class="grid-container">
-        <div class="grid-item">
-            <a href="servicos.php"><img class="icons" src="assets/festa.png">Serviços</a>
-        </div>
-        <div class="grid-item">
-            <a href="pedidos.php"><img class="icons" src="assets/pedidos.png">Pedidos</a>
-        </div>
+      <div class="grid-item">
+        <a href="servicos.php"
+          ><img class="icons" src="assets/festa.png" />Serviços</a
+        >
+      </div>
+      <div class="grid-item">
+        <a href="pedidos.php"
+          ><img class="icons" src="assets/pedidos.png" />Pedidos</a
+        >
+      </div>
     </div>
 
-    <hr id="hrtop">
+    <hr id="hrtop" />
 
     <form>
-        <input type="search" placeholder="Buscar...">
-        <button type="submit">Search</button>
+      <input type="search" placeholder="Buscar..." />
+      <button type="submit">Search</button>
     </form>
 
-    <hr id="hrmain">
+    <!-- BANNER SECTION  -->
+
+    <!-- SEÇÃO ANÚNCIOS HOME -->
+
+    <hr id="hrmain" />
 
     <section class="latest-products">
-        <div class="prod-text">
-            <h2>Anúncios Recentes</h2>
-            <hr>
-            <a href="#"><h2>Ver Todos</h2></a>
-        </div>
-        <div class="product-container" id="product-container">
-            <!-- JavaScript -->
-        </div>
+      <div class="prod-text">
+        <h2>Anúncios Recentes</h2>
+        <hr />
+        <a href="#"><h2>Ver Todos</h2></a>
+      </div>
+      <div class="product-container" id="product-container"></div>
     </section>
-    <script src="js/script.js"></script>
-</body>
 
+    <!-- SEÇÃO ANÚNCIOS HOME -->
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
