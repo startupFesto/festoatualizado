@@ -1,7 +1,10 @@
-/*     SCRIPT CSS DA PÁGINA HOME DO SITE */
+/* SCRIPT CSS DA PÁGINA HOME DO SITE */
+
+*{
+    font-family: 'Inter', sans-serif;
+}
 
 body {
-    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     background: #ececec;
@@ -12,12 +15,12 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .header {
-    margin: 1rem 5rem 1rem 6rem;
-    background-color: #ececec;
+    /* margin: 1rem 5rem 1rem 6rem; */
+    background-color: #ffffff;
     height: 5rem;
     display: flex;
     justify-content: space-between;
-    padding: 0 1.8rem;
+    padding: 10px 5.5rem;
     align-items: center;
 }
 
@@ -30,10 +33,6 @@ body {
     padding: 30px;
     border-radius: 10px;
 }
-
-/* .buttonstop{      TIREI PORQUE É INUTIL, REVISAR
-    padding-bottom: 10px;
-} */
 
 .btnstop {
     text-decoration: none;
@@ -48,23 +47,6 @@ body {
 
 .btnstop:hover {
     color: rgb(173, 173, 173);
-}
-
-.btnveja {
-
-    text-decoration: none;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-    text-align: center;
-    color: rgb(219, 219, 219);
-    transition: linear 0.15s;
-}
-
-.btnveja:hover {
-    color: white;
-    background-color: #EBB30E;
 }
 
 .btnstopcadastro {
@@ -90,7 +72,7 @@ body {
     margin-bottom: 0.4rem;
 }
 
-/*Banner*/
+/* Inicio Banner*/
 
 .banner {
     position: relative;
@@ -116,15 +98,13 @@ body {
 .banner-text h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    
+
     /* Animação de gradiente */
-    background: linear-gradient(
-        to right,
-        #ffffff 20%,
-        #acacac 30%,
-        #acacac 70%,
-        #ffffff 80%
-    );
+    background: linear-gradient(to right,
+            #ffffff 20%,
+            #acacac 30%,
+            #acacac 70%,
+            #ffffff 80%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -137,16 +117,37 @@ body {
     margin-bottom: 30px;
 }
 
-@keyframes textShine /* Keyframe de animação de gradiente */{
+@keyframes textShine
+
+/* Keyframe de animação de gradiente */
+    {
     0% {
         background-position: 0% 50%;
     }
+
     100% {
         background-position: 100% 50%;
     }
 }
 
-/**/
+.btnveja {
+    /* Botao banner */
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    color: rgb(219, 219, 219);
+    transition: linear 0.15s;
+}
+
+.btnveja:hover {
+    color: white;
+    background-color: #EBB30E;
+}
+
+/* Fim Banner*/
 
 #hrtop {
     opacity: 0%;
@@ -311,11 +312,54 @@ input[type="search"]:focus {
     /* Full width horizontal line */
 }
 
-
-.unselectable { /* Classe para desabilitar seleção */
+.unselectable {
+    /* Classe para desabilitar selecao */
     -webkit-user-select: none;
     -webkit-touch-callout: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
+}
+
+/* FOOTER */
+
+footer {
+    font-weight: 200;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: linear 0.2s;
+}
+
+a:hover{
+    color: #ff8a8a;
+    text-decoration: dotted;
+}
+
+.footer-section img {
+    max-width: 100px;
+}
+
+/* FOOTER */

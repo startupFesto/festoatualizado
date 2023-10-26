@@ -5,12 +5,44 @@ body {
     padding: 0;
 }
 
-a{
+#topo {
+    padding-top: 35px;
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnstop {
+    margin-right: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+    color: #EBB30E
+}
+
+.btnstop:hover {
+    color: rgb(0, 0, 0);
+}
+
+#btnborder {
+    border: 2px solid #EBB30E;
+    border-radius: 10px;
+    padding: 13px 20px 13px 20px;
+    transition: linear 0.15s;
+}
+
+#btnborder:hover {
+    border: 2px solid #EBB30E;
+}
+
+a {
     color: black;
     text-decoration: none;
 }
 
-.arrow{
+.arrow {
     font-size: 2rem
 }
 

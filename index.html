@@ -1,96 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="ISO-8859-1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Festô!</title>
 
-    <!-- LINKS -->
+<head>
+  <meta charset="ISO-8859-1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Festô!</title>
 
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+  <!-- LINKS -->
 
-    <!-- LINKS -->
-  </head>
-  <body>
-    <!-- HEADER -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
 
-    <div class="header">
-      <div>
-        <a href="index.html"
-          ><img class="logo" src="assets/festoblacknobgLOGOTOP.png"
-        /></a>
-      </div>
-      <div class="buttonstop">
-        <a class="btnstop" href="suporte/suporte.html">Suporte</a>
-        <a class="btnstop" href="login/escolha-log.html">Login</a>
-        <a
-          class="btnstop btnstopcadastro"
-          id="btnborder"
-          href="cadastro/escolha-cad.html"
-          >Cadastre-se</a
-        >
-      </div>
+  <!-- LINKS -->
+</head>
+
+<body>
+
+
+  <!-- HEADER -->
+
+  <div class="header">
+    <div>
+      <a href="index.html"><img class="logo" src="assets/festoblacknobgLOGOTOP.png" /></a>
     </div>
-
-    <!-- HEADER -->
-
-    <!-- BANNER SECTION  -->
-    <div class="banner unselectable">
-      <img class="unselectable" src="assets/banner.jpg" alt="" />
-      <div class="banner-text">
-        <h1 class="unselectable">Faça seu evento pelo Festô!</h1>
-        <a href="#" class="btnveja" id="btnborder">Ver ofertas</a>
-      </div>
+    <div class="buttonstop">
+      <a class="btnstop" href="suporte/suporte.html">Suporte</a>
+      <a class="btnstop" href="login/escolha-log.html">Login</a>
+      <a class="btnstop btnstopcadastro" id="btnborder" href="cadastro/escolha-cad.html">Cadastre-se</a>
     </div>
+  </div>
 
-    <hr id="hrtop" />
+  <!-- HEADER -->
 
-    <div class="grid-container">
-      <div class="grid-item">
-        <a href="servicos.php"
-          ><img class="icons" src="assets/festa.png" />Serviços</a
-        >
-      </div>
-      <div class="grid-item">
-        <a href="pedidos.php"
-          ><img class="icons" src="assets/pedidos.png" />Pedidos</a
-        >
-      </div>
+  <!-- BANNER SECTION  -->
+
+  <div class="banner unselectable">
+    <img class="unselectable" src="assets/banner.jpg" alt="" />
+    <div class="banner-text">
+      <h1 class="unselectable">Faça seu evento pelo Festô!</h1>
+      <a href="#" class="btnveja" id="btnborder">Ver ofertas</a>
     </div>
+  </div>
 
-    <hr id="hrtop" />
+  <!-- BANNER SECTION  -->
 
-    <form>
-      <input type="search" placeholder="Buscar..." />
-      <button type="submit">Search</button>
-    </form>
+  <hr id="hrtop" />
 
-    <!-- BANNER SECTION  -->
+  <!-- ICONES & SEARCH BAR -->
 
-    <!-- SEÇÃO ANÚNCIOS HOME -->
+  <div class="grid-container">
+    <div class="grid-item">
+      <a href="servicos.php"><img class="icons" src="assets/festa.png" />Serviços</a>
+    </div>
+    <div class="grid-item">
+      <a href="pedidos.php"><img class="icons" src="assets/pedidos.png" />Pedidos</a>
+    </div>
+  </div>
 
-    <hr id="hrmain" />
+  <hr id="hrtop" />
 
-    <section class="latest-products">
-      <div class="prod-text">
-        <h2>Anúncios Recentes</h2>
-        <hr />
-        <a href="#"><h2>Ver Todos</h2></a>
-      </div>
-      <div class="product-container" id="product-container"></div>
-    </section>
+  <form>
+    <input type="search" placeholder="Buscar..." />
+    <button type="submit">Search</button>
+  </form>
 
-    <!-- SEÇÃO ANÚNCIOS HOME -->
+  <!-- ICONES & SEARCH BAR -->
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
-  </body>
+  <!-- SEÇÃO ANÚNCIOS HOME -->
+
+  <hr id="hrmain" />
+
+  <section class="latest-products">
+    <div class="prod-text">
+      <h2>Serviços disponíveis</h2>
+      <hr />
+      <a href="#">
+        <h2>Ver Todos</h2>
+      </a>
+    </div>
+    <div class="product-container" id="product-container"></div>
+  </section>
+
+  <!-- SEÇÃO ANÚNCIOS HOME -->
+
+  <!-- SEÇÃO PEDIDOS HOME -->
+
+  <section class="latest-products">
+    <div class="prod-text">
+      <h2>Pedidos Recentes</h2>
+      <hr />
+      <a href="#">
+        <h2>Ver Todos</h2>
+      </a>
+    </div>
+    <div class="product-container" id="product-container">
+      <!-- Temporario -->
+      <br><br><br><br><br>Pedidos<br><br><br><br><br><br><br>
+    </div>
+  </section>
+
+  <!-- SEÇÃO PEDIDOS HOME -->
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="footer-section left">
+      <ul>
+        <li><a href="mailto:startupfesto@gmail.com">Contato</a></li>
+        <li><a href="suporte/suporte.html">Suporte</a></li>
+      </ul>
+    </div>
+    <div class="footer-section middle">
+      <img src="assets/festowhitenobgLOGO.png" alt="Logo">
+      <p>2023 Festô!</p>
+    </div>
+    <div class="footer-section right">
+      <ul>
+        <li><a href="https://www.instagram.com/startupfesto">Instagram</a></li>
+        <li><a href="mailto:startupfesto@gmail.com">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- FOOTER -->
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+
 </html>
