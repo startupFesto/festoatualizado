@@ -1,4 +1,7 @@
-<!-- SCRIPT DA LISTAGEM EDIÇÃO E EXCLUSÃO DOS SERVICOS -->
+<!-- SCRIPT RESPONSÁVEL PELA LISTAGEM PÚBLICA DE TODOS OS SERVIÇOS POSTADOS -->
+
+<!-- CÓDIGO PHP -->
+
 <?php
 header("Content-type: text/html; charset=ISO-8859-1");
 
@@ -16,7 +19,7 @@ $result = $conexao->query($sql);
 <head>
     <meta charset="ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servi�os dispon�veis</title>
+    <title>Serviços disponíveis</title>
 
     <!-- LINKS -->
 
@@ -39,7 +42,7 @@ $result = $conexao->query($sql);
 
     <div class="banner">
         <h1>
-            Servi�os dispon�veis
+            Serviços disponíveis
         </h1>
         <table>
             <tbody>
@@ -49,10 +52,10 @@ $result = $conexao->query($sql);
 
                     echo "<ul class='dados-perfil'><li><img src='../assets/placeholder.jpg' width='100px'></li></ul>";
                     echo "<ul class='dados-perfil' id='aa'>";
-                    echo "<li>Nome do servi�o: </li>";
+                    echo "<li>Nome do serviço: </li>";
                     echo "<li>Finalidade: </li>";
-                    echo "<li>Pre�o: </li>";
-                    echo "<li>Dias dispon�veis:</li>";
+                    echo "<li>Preço: </li>";
+                    echo "<li>Dias disponíveis:</li>";
                     echo "<li>Cidades atendidas:</li>";
                     echo "<li>Tamanho da equipe:</li>";
                     echo "<li>Fornecedor: </li>";
@@ -78,8 +81,5 @@ $result = $conexao->query($sql);
         </table>
     </div>
 
-    <!-- SECTION PEDIDOS -->
-
 </body>
-
 </html>
